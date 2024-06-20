@@ -44,8 +44,8 @@ Auth::routes();
 
 Route::get('/adminlogin', [App\Http\Controllers\HomeController::class, 'adminlogin'])->name('adminlogin'); 
 
-// Route::post('/post_login', [App\Http\Controllers\HomeController::class, 'post_login'])->name('post_login'); 
-// Route::get('/logout_user', [App\Http\Controllers\HomeController::class, 'logout_user'])->name('logout_user'); 
+Route::post('/post_login', [App\Http\Controllers\HomeController::class, 'post_login'])->name('post_login'); 
+Route::get('/logout_user', [App\Http\Controllers\HomeController::class, 'logout_user'])->name('logout_user'); 
 
 
 // Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth','checkrole']);
