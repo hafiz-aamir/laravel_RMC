@@ -50,12 +50,12 @@ Route::get('/adminlogin', [App\Http\Controllers\HomeController::class, 'adminlog
 
 // Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth','checkrole']);
 
-// Route::get('/find/{id?}', [App\Http\Controllers\HomeController::class, 'find'])->name('find');
+Route::get('/find/{id?}', [App\Http\Controllers\HomeController::class, 'find'])->name('find');
 
-// Route::get('/coach_single', [App\Http\Controllers\HomeController::class, 'coach_single'])->name('coach_single');
+Route::get('/coach_single', [App\Http\Controllers\HomeController::class, 'coach_single'])->name('coach_single');
 
 
-// Route::get('/search_coach_school', [App\Http\Controllers\HomeController::class, 'search_coach_school'])->name('search_coach_school'); 
+Route::get('/search_coach_school', [App\Http\Controllers\HomeController::class, 'search_coach_school'])->name('search_coach_school'); 
 
 
 // Route::post('/add_submit_correction', [App\Http\Controllers\HomeController::class, 'add_submit_correction'])->name('add_submit_correction'); 
