@@ -44,82 +44,82 @@ Auth::routes();
 
 Route::get('/adminlogin', [App\Http\Controllers\HomeController::class, 'adminlogin'])->name('adminlogin'); 
 
-Route::post('/post_login', [App\Http\Controllers\HomeController::class, 'post_login'])->name('post_login'); 
-Route::get('/logout_user', [App\Http\Controllers\HomeController::class, 'logout_user'])->name('logout_user'); 
+// Route::post('/post_login', [App\Http\Controllers\HomeController::class, 'post_login'])->name('post_login'); 
+// Route::get('/logout_user', [App\Http\Controllers\HomeController::class, 'logout_user'])->name('logout_user'); 
 
 
-Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth','checkrole']);
+// Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth','checkrole']);
 
-Route::get('/find/{id?}', [App\Http\Controllers\HomeController::class, 'find'])->name('find');
+// Route::get('/find/{id?}', [App\Http\Controllers\HomeController::class, 'find'])->name('find');
 
-Route::get('/coach_single', [App\Http\Controllers\HomeController::class, 'coach_single'])->name('coach_single');
-
-
-Route::get('/search_coach_school', [App\Http\Controllers\HomeController::class, 'search_coach_school'])->name('search_coach_school'); 
+// Route::get('/coach_single', [App\Http\Controllers\HomeController::class, 'coach_single'])->name('coach_single');
 
 
-Route::post('/add_submit_correction', [App\Http\Controllers\HomeController::class, 'add_submit_correction'])->name('add_submit_correction'); 
+// Route::get('/search_coach_school', [App\Http\Controllers\HomeController::class, 'search_coach_school'])->name('search_coach_school'); 
 
 
-Route::get('/coachbyid/{id?}', [App\Http\Controllers\HomeController::class, 'coachbyid'])->name('coachbyid');
-Route::get('/school_single', [App\Http\Controllers\HomeController::class, 'school_single'])->name('school_single');
+// Route::post('/add_submit_correction', [App\Http\Controllers\HomeController::class, 'add_submit_correction'])->name('add_submit_correction'); 
 
-Route::post('/Add_review', [App\Http\Controllers\HomeController::class, 'Add_review'])->name('Add_review'); 
-Route::post('/Add_flag_review', [App\Http\Controllers\HomeController::class, 'Add_flag_review'])->name('Add_flag_review');
+
+// Route::get('/coachbyid/{id?}', [App\Http\Controllers\HomeController::class, 'coachbyid'])->name('coachbyid');
+// Route::get('/school_single', [App\Http\Controllers\HomeController::class, 'school_single'])->name('school_single');
+
+// Route::post('/Add_review', [App\Http\Controllers\HomeController::class, 'Add_review'])->name('Add_review'); 
+// Route::post('/Add_flag_review', [App\Http\Controllers\HomeController::class, 'Add_flag_review'])->name('Add_flag_review');
 
   
-Route::get('/accept_coach/{id?}', [App\Http\Controllers\HomeController::class, 'accept_coach'])->name('accept_coach');
-Route::get('/reject_coach/{id?}', [App\Http\Controllers\HomeController::class, 'reject_coach'])->name('reject_coach');
+// Route::get('/accept_coach/{id?}', [App\Http\Controllers\HomeController::class, 'accept_coach'])->name('accept_coach');
+// Route::get('/reject_coach/{id?}', [App\Http\Controllers\HomeController::class, 'reject_coach'])->name('reject_coach');
 
-Route::get('/delete_review/{id?}', [App\Http\Controllers\HomeController::class, 'delete_review'])->name('delete_review');
-
-
-Route::get('/change_coach_form/{id?}', [App\Http\Controllers\HomeController::class, 'change_coach_form'])->name('change_coach_form'); 
-Route::post('/change_coach', [App\Http\Controllers\HomeController::class, 'change_coach'])->name('change_coach');
+// Route::get('/delete_review/{id?}', [App\Http\Controllers\HomeController::class, 'delete_review'])->name('delete_review');
 
 
-Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'admin_dashboard'])->name('admin_dashboard')->middleware('auth');
-Route::get('/admin/review', [App\Http\Controllers\HomeController::class, 'admin_review'])->name('admin_review')->middleware('auth');
-Route::get('/admin/coaches', [App\Http\Controllers\HomeController::class, 'admin_coaches'])->name('admin_coaches')->middleware('auth');
+// Route::get('/change_coach_form/{id?}', [App\Http\Controllers\HomeController::class, 'change_coach_form'])->name('change_coach_form'); 
+// Route::post('/change_coach', [App\Http\Controllers\HomeController::class, 'change_coach'])->name('change_coach');
 
 
-Route::get('/admin/coachesdetails', [App\Http\Controllers\HomeController::class, 'coaches_details'])->name('coaches_details')->middleware('auth');
+// Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'admin_dashboard'])->name('admin_dashboard')->middleware('auth');
+// Route::get('/admin/review', [App\Http\Controllers\HomeController::class, 'admin_review'])->name('admin_review')->middleware('auth');
+// Route::get('/admin/coaches', [App\Http\Controllers\HomeController::class, 'admin_coaches'])->name('admin_coaches')->middleware('auth');
 
 
-Route::get('/admin/coach_change_step_1', [App\Http\Controllers\HomeController::class, 'coach_change_step_1'])->name('coach_change_step_1')->middleware('auth');
-Route::get('/admin/coach_change_step_2', [App\Http\Controllers\HomeController::class, 'coach_change_step_2'])->name('coach_change_step_2')->middleware('auth');
-Route::get('/admin/coach_change_step_3', [App\Http\Controllers\HomeController::class, 'coach_change_step_3'])->name('coach_change_step_3')->middleware('auth');
+// Route::get('/admin/coachesdetails', [App\Http\Controllers\HomeController::class, 'coaches_details'])->name('coaches_details')->middleware('auth');
 
 
-Route::get('/admin/school_change_step_1', [App\Http\Controllers\HomeController::class, 'school_change_step_1'])->name('school_change_step_1')->middleware('auth');
-Route::get('/admin/school_change_step_2', [App\Http\Controllers\HomeController::class, 'school_change_step_2'])->name('school_change_step_2')->middleware('auth');
-Route::get('/admin/school_change_step_3', [App\Http\Controllers\HomeController::class, 'school_change_step_3'])->name('school_change_step_3')->middleware('auth');
+// Route::get('/admin/coach_change_step_1', [App\Http\Controllers\HomeController::class, 'coach_change_step_1'])->name('coach_change_step_1')->middleware('auth');
+// Route::get('/admin/coach_change_step_2', [App\Http\Controllers\HomeController::class, 'coach_change_step_2'])->name('coach_change_step_2')->middleware('auth');
+// Route::get('/admin/coach_change_step_3', [App\Http\Controllers\HomeController::class, 'coach_change_step_3'])->name('coach_change_step_3')->middleware('auth');
+
+
+// Route::get('/admin/school_change_step_1', [App\Http\Controllers\HomeController::class, 'school_change_step_1'])->name('school_change_step_1')->middleware('auth');
+// Route::get('/admin/school_change_step_2', [App\Http\Controllers\HomeController::class, 'school_change_step_2'])->name('school_change_step_2')->middleware('auth');
+// Route::get('/admin/school_change_step_3', [App\Http\Controllers\HomeController::class, 'school_change_step_3'])->name('school_change_step_3')->middleware('auth');
 
 
 
-Route::post('/add_change_coaches', [App\Http\Controllers\HomeController::class, 'add_change_coaches'])->name('add_change_coaches')->middleware('auth');
-Route::post('/add_change_school', [App\Http\Controllers\HomeController::class, 'add_change_school'])->name('add_change_school')->middleware('auth');
+// Route::post('/add_change_coaches', [App\Http\Controllers\HomeController::class, 'add_change_coaches'])->name('add_change_coaches')->middleware('auth');
+// Route::post('/add_change_school', [App\Http\Controllers\HomeController::class, 'add_change_school'])->name('add_change_school')->middleware('auth');
 
 
-Route::get('/admin/view_coach', [App\Http\Controllers\HomeController::class, 'view_coach'])->name('view_coach')->middleware('auth');
-Route::get('/admin/add_coach', [App\Http\Controllers\HomeController::class, 'add_coach'])->name('add_coach')->middleware('auth');
-Route::post('/post_add_new_coach', [App\Http\Controllers\HomeController::class, 'post_add_new_coach'])->name('post_add_new_coach')->middleware('auth');
-Route::get('/admin/view_coach_edit/{id?}', [App\Http\Controllers\HomeController::class, 'view_coach_edit'])->name('view_coach_edit')->middleware('auth');
+// Route::get('/admin/view_coach', [App\Http\Controllers\HomeController::class, 'view_coach'])->name('view_coach')->middleware('auth');
+// Route::get('/admin/add_coach', [App\Http\Controllers\HomeController::class, 'add_coach'])->name('add_coach')->middleware('auth');
+// Route::post('/post_add_new_coach', [App\Http\Controllers\HomeController::class, 'post_add_new_coach'])->name('post_add_new_coach')->middleware('auth');
+// Route::get('/admin/view_coach_edit/{id?}', [App\Http\Controllers\HomeController::class, 'view_coach_edit'])->name('view_coach_edit')->middleware('auth');
 
-Route::get('/admin/activity_log', [App\Http\Controllers\HomeController::class, 'activity_log'])->name('activity_log')->middleware('auth');
-Route::get('/admin/see_a_mistake', [App\Http\Controllers\HomeController::class, 'see_a_mistake'])->name('see_a_mistake')->middleware('auth');
-
-
-Route::get('/admin/view_school', [App\Http\Controllers\HomeController::class, 'view_school'])->name('view_school')->middleware('auth');
-Route::get('/admin/add_school', [App\Http\Controllers\HomeController::class, 'add_school'])->name('add_school')->middleware('auth');
-Route::post('/post_add_school', [App\Http\Controllers\HomeController::class, 'post_add_school'])->name('post_add_school')->middleware('auth');
+// Route::get('/admin/activity_log', [App\Http\Controllers\HomeController::class, 'activity_log'])->name('activity_log')->middleware('auth');
+// Route::get('/admin/see_a_mistake', [App\Http\Controllers\HomeController::class, 'see_a_mistake'])->name('see_a_mistake')->middleware('auth');
 
 
-Route::get('admin/generator', ['uses'  => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->middleware(['auth','checkrole']);
-Route::post('admin/generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator'])->middleware(['auth','checkrole']);
+// Route::get('/admin/view_school', [App\Http\Controllers\HomeController::class, 'view_school'])->name('view_school')->middleware('auth');
+// Route::get('/admin/add_school', [App\Http\Controllers\HomeController::class, 'add_school'])->name('add_school')->middleware('auth');
+// Route::post('/post_add_school', [App\Http\Controllers\HomeController::class, 'post_add_school'])->name('post_add_school')->middleware('auth');
 
-Route::get('/autocomplete_school', [App\Http\Controllers\HomeController::class, 'autocomplete_school'])->name('autocomplete_school');
-Route::get('/autocomplete_coach', [App\Http\Controllers\HomeController::class, 'autocomplete_coach'])->name('autocomplete_coach');
+
+// Route::get('admin/generator', ['uses'  => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator'])->middleware(['auth','checkrole']);
+// Route::post('admin/generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator'])->middleware(['auth','checkrole']);
+
+// Route::get('/autocomplete_school', [App\Http\Controllers\HomeController::class, 'autocomplete_school'])->name('autocomplete_school');
+// Route::get('/autocomplete_coach', [App\Http\Controllers\HomeController::class, 'autocomplete_coach'])->name('autocomplete_coach');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
