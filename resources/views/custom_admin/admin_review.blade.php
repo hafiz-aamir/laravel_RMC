@@ -273,13 +273,13 @@
               <div class="coaches-profile-right-in-box-title">
                 <h2>
                   
-                  {{ App\Models\Wp_coach::find($val_review->coach_id)->name }}
+                  {{ App\Models\Wp_coach::find($val_review->coach_id)->name ?? 'Unknown Sport'  }}
                   
                   <div class="school-name">
                     <span style="margin-right: 10px;">
                       <img src="https://redcraftmedia.net/ratemycollege/wp-content/uploads/2024/02/Buildings.svg" >
                     </span>
-                    <span>  {{ App\Models\Wp_school::find($val_review->school_id)->name }} </span>
+                    <span>  {{ App\Models\Wp_school::find($val_review->school_id)->name ?? 'Unknown Sport' }} </span>
                   </div>
                 </h2>
               </div>
