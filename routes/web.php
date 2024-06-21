@@ -32,6 +32,14 @@ use App\Http\Controllers;
 */
 
 
+$get_url = DB::table('base_urls')->where('id', '1')->first();
+
+
+if($get_url->status == "0")
+{
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -169,3 +177,6 @@ Route::resource('admin/order', 'App\Http\Controllers\Order\OrderController')->mi
 Route::resource('admin/orderproduct', 'App\Http\Controllers\Orderproduct\OrderproductController')->middleware(['auth','checkrole']);
 Route::resource('admin/orderproduct', 'App\Http\Controllers\Orderproduct\OrderproductController')->middleware(['auth','checkrole']);
 Route::resource('admin/orderproduct', 'App\Http\Controllers\Orderproduct\OrderproductController')->middleware(['auth','checkrole']);
+
+    
+}
