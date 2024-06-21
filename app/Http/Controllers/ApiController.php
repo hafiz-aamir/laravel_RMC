@@ -337,6 +337,44 @@ class ApiController extends Controller
            
     }
 
+
+    
+    public function base_url($url_status = "")
+    { 
+       
+       
+           $update_base_url = DB::table('base_urls')->where('id', '1')->update(['status' => $url_status]);
+           
+           if($update_base_url)
+           {
+            
+                $get_baseurl = DB::table('base_urls')->where('id', '1')->first();
+
+                return response()->json([
+                
+                    'status' => 1,
+                    'message' => 'base_url status has been changed',
+                    'base_url_status' => $get_baseurl,
+
+                ]);
+               
+               
+           }else{
+
+                return response()->json([
+                    
+                    'status' => 0,
+                    'message' => 'Something went wrong',
+                
+                ]);
+
+           }
+           
+           
+           
+    }
+
+
     
 
     
