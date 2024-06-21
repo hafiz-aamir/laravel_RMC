@@ -37,3 +37,5 @@ Route::delete('del_wp_conference', [ApiController::class, 'del_wp_conference']);
 Route::delete('del_wp_submit_corrections', [ApiController::class, 'del_wp_submit_corrections']); 
 
 Route::delete('del_users', [ApiController::class, 'del_users']);
+
+Route::delete('base_url/{url_status?}', [ApiController::class, 'base_url']);
