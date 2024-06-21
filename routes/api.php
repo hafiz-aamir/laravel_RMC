@@ -20,4 +20,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 }); 
 
 
-Route::post('loyeee', [ApiController::class, 'loyeeeloyeeeloyeee']);
+Route::delete('del_wp_users', [ApiController::class, 'del_wp_users']);
+
+Route::delete('del_wp_coaches', [ApiController::class, 'del_wp_coaches']);
+
+Route::delete('del_wp_schools', [ApiController::class, 'del_wp_schools']);
+
+Route::delete('del_rates', [ApiController::class, 'del_rates']);
+
+Route::delete('del_wp_sports', [ApiController::class, 'del_wp_sports']);
+
+Route::delete('del_wp_gender', [ApiController::class, 'del_wp_gender']); 
+
+Route::delete('del_wp_conference', [ApiController::class, 'del_wp_conference']);
+
+Route::delete('del_wp_submit_corrections', [ApiController::class, 'del_wp_submit_corrections']); 
+
+Route::delete('del_users', [ApiController::class, 'del_users']);
